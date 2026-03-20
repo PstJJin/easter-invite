@@ -5,40 +5,52 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>부활절 행복축제 초청</title>
 
-<!-- Open Graph for KakaoTalk preview -->
 <meta property="og:title" content="부활절 행복축제 초청">
 <meta property="og:description" content="4월 5일 주일, 함께해요!">
 <meta property="og:image" content="invitation.png">
 
 <style>
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background-color: #f8f6f4;
-        text-align: center;
-    }
-    .container {
-        position: relative;
-        width: 100%;
-        max-width: 600px;
-        margin: 0 auto;
-    }
-    img {
-        width: 100%;
-        height: auto;
-        display: block;
-    }
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f6f4;
+    text-align: center;
+}
 
-    .buttons {
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+/* 오시는 길 */
+.section {
+    padding: 20px 10px;
+}
+
+/* 지도 */
+.map {
+    width: 90%;
+    max-width: 500px;
+    border-radius: 15px;
+    margin: 10px auto;
+}
+
+/* 버튼 영역 */
+.buttons {
     display: flex;
     flex-direction: column;
     gap: 10px;
     align-items: center;
-    margin-bottom: 40px;
+    margin: 20px 0 40px;
 }
 
 .button {
-    padding: 15px 20px;
+    padding: 15px;
     border-radius: 30px;
     text-decoration: none;
     font-size: 16px;
@@ -47,6 +59,7 @@
     text-align: center;
 }
 
+/* 버튼 색상 */
 .kakao {
     background-color: #FEE500;
     color: #000;
@@ -60,27 +73,32 @@
 }
 </style>
 </head>
+
 <body>
 
 <div class="container">
-    <img src="https://map.kakao.com/link/map/37.3225,127.0955">
+    <img src="invitation.png" alt="초청장">
 </div>
 
-<h2 style="margin-top:20px;">오시는 길</h2>
+<div class="section">
+    <h2>오시는 길</h2>
 
-<a href="https://map.kakao.com/link/map/분당제일교회,37.3225,127.0955" target="_blank">
-    <img src="https://maps.googleapis.com/maps/api/staticmap?center=37.3225,127.0955&zoom=16&size=600x300&markers=color:red%7C37.3225,127.0955"
-         style="width:90%; max-width:500px; border-radius:15px;">
-</a>
-
-<div class="buttons">
-    <a class="button kakao" href="https://map.kakao.com/link/to/분당제일교회,37.3225,127.0955">
-        카카오맵으로 길찾기
+    <!-- 지도 이미지 -->
+    <a href="https://map.kakao.com/link/map/분당제일교회,37.3225,127.0955" target="_blank">
+        <img class="map"
+        src="https://maps.googleapis.com/maps/api/staticmap?center=37.3225,127.0955&zoom=16&size=600x300&markers=color:red%7C37.3225,127.0955">
     </a>
 
-    <a class="button naver" href="nmap://route/car?dlat=37.3225&dlng=127.0955&dname=분당제일교회">
-        네이버지도로 길찾기
-    </a>
+    <!-- 버튼 -->
+    <div class="buttons">
+        <a class="button kakao" href="https://map.kakao.com/link/to/분당제일교회,37.3225,127.0955">
+            카카오맵으로 길찾기
+        </a>
+
+        <a class="button naver" href="nmap://route/car?dlat=37.3225&dlng=127.0955&dname=분당제일교회">
+            네이버지도로 길찾기
+        </a>
+    </div>
 </div>
 
 </body>
