@@ -42,17 +42,60 @@
         text-decoration: none;
         box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
+    .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.button {
+    padding: 15px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 16px;
+    width: 80%;
+    max-width: 300px;
+    text-align: center;
+}
+
+.kakao {
+    background-color: #FEE500;
+    color: #000;
+    font-weight: bold;
+}
+
+.naver {
+    background-color: #03C75A;
+    color: white;
+    font-weight: bold;
+}
 </style>
 </head>
 <body>
 
 <div class="container">
-    <img src="invitation.png" alt="부활절 초청장">
+    <img src="invitation.png" alt="초청장">
 </div>
 
-<a class="button" href="https://www.google.com/maps/search/?api=1&query=분당제일교회+용인시+수지구+수지로342번길23" target="_blank">
-    오시는 길
+<!-- ✅ 여기부터 추가 -->
+<h2 style="margin-top:20px;">오시는 길</h2>
+
+<a href="https://map.kakao.com/link/map/분당제일교회,37.3225,127.0955" target="_blank">
+    <img src="https://map.kakao.com/link/map/37.3225,127.0955"
+         style="width:90%; max-width:500px; border-radius:15px;">
 </a>
+
+<div class="buttons">
+    <a class="button kakao" href="https://map.kakao.com/link/to/분당제일교회,37.3225,127.0955">
+        카카오맵으로 길찾기
+    </a>
+
+    <a class="button naver" href="nmap://route/car?dlat=37.3225&dlng=127.0955&dname=분당제일교회">
+        네이버지도로 길찾기
+    </a>
+</div>
 
 </body>
 </html>
